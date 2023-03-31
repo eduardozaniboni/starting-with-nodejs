@@ -64,7 +64,7 @@ app.put("/products/:id", (request, response) => {
   return response.json({ message: "Product alteration sucessfully" });
 });
 
-// delete method
+// delete method with parameters (id)
 app.delete("/products/:id", (request, response) => {
   const { id } = request.params;
 
