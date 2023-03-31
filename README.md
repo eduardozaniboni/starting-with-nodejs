@@ -34,7 +34,7 @@
 - Params => Route params "/product/("1234")"
 - Query => Query params "/product?id=1234&value=1234"
 
-<span>________________________________________________________________________________________________________________________________________________________</span>
+#
 
 # <img align="center" width="30" src="https://cdn-icons-png.flaticon.com/512/7826/7826359.png"> - Começando meus estudos com Node.JS
 
