@@ -14,14 +14,9 @@ type Product = {
 
 let products: Product[] = [];
 
-fs.readFile("products.json", "utf-8", (err, data) => {
-  if (err) {
-    console.log(err);
-  } else {
-    products = JSON.parse(data);
-  }
-});
+readingFile();
 
+// post method
 app.post("/products", (request, response) => {
   const { name, price } = request.body;
   const id = randomUUID();
@@ -39,10 +34,12 @@ app.post("/products", (request, response) => {
   return response.json(product);
 });
 
+// get method
 app.get("/products", (request, response) => {
   return response.json(products);
 });
 
+// get method with parameters (id)
 app.get("/products/:id", (request, response) => {
   const { id } = request.params;
   const product = products.find((product) => product.id === id);
@@ -50,6 +47,7 @@ app.get("/products/:id", (request, response) => {
   return response.json(product);
 });
 
+// put method
 app.put("/products/:id", (request, response) => {
   const { id } = request.params;
   const { name, price } = request.body;
@@ -66,6 +64,7 @@ app.put("/products/:id", (request, response) => {
   return response.json({ message: "Product alteration sucessfully" });
 });
 
+// delete method
 app.delete("/products/:id", (request, response) => {
   const { id } = request.params;
 
@@ -82,12 +81,23 @@ app.listen(4002, () => {
   console.log("Server starting in 4002 port");
 });
 
+// utility functions
 function productFile() {
   fs.writeFile("products.json", JSON.stringify(products), (err) => {
     if (err) {
       console.log(err);
     } else {
       console.log("Product inserted successfully");
+    }
+  });
+}
+
+function readingFile() {
+  fs.readFile("products.json", "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      products = JSON.parse(data);
     }
   });
 }
