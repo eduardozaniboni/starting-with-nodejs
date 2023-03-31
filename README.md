@@ -1,4 +1,5 @@
-# EN - Starting my studies with Node.JS 
+
+# <img align="center" width="30" src="https://cdn-icons-png.flaticon.com/512/197/197484.png"> - Starting my studies with Node.JS 
 
 ### What is Node.JS?
   - A platform where it allows the execution of server-side JavaScript
@@ -35,7 +36,7 @@
 
 <span>________________________________________________________________________________________________________________________________________________________</span>
 
-# PT/BR - Começando meus estudos com Node.JS
+# <img align="center" width="30" src="https://cdn-icons-png.flaticon.com/512/7826/7826359.png"> - Começando meus estudos com Node.JS
 
 ### O que é Node.JS?
   - Uma plataforma onde permiti a execução de JavaScript do lado do servidor
